@@ -1,10 +1,26 @@
-const initialState = 0
+const initialState = {
+    count:0
+}
 const reduce = (state=initialState,action) => {
     if (action.type==="add") {
-        return state+1
+        return {
+            count:state.count+1
+        }
     }
     if (action.type==="minus"){
-        return state-1
+        return {
+            count:state.count-1
+        }
+    }
+    if (action.type==="multiply"){
+        return {
+            count:state.count*2
+        }
+    }
+    if (action.type==="devide"){
+        return {
+            count:state.count/2
+        }
     }
     return state
 } 
